@@ -11,7 +11,7 @@ module PassSlot
     # @param [String] version API Version
     # @param [Boolean] debug
     # @return [PassSlot::Engine]
-    def initialize(app_key=nil, base='https://api.passslot.com', version='v1', debug=false)
+    def initialize(app_key=nil, base='https://api.passslot.com/passes', version='v1', debug=false)
       @app_key = app_key || ENV['PASSSLOT_APPKEY']
       if @app_key.nil?
         raise "You must provide a PassSlot App Key. You can get your app key at https://www.passslot.com/account/apps"
