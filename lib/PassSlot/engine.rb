@@ -63,16 +63,11 @@ module PassSlot
     # @param [Hash] values Placeholder values (placeholderName => placeholderValue)
     # @return [Hash] New placeholder values
     # @raise [PassSlot::ApiError]
-#     def update_pass_values(pass, values)
-#       resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}/values"
-#       call :put, resource, values      
-#     end
-    
-    
-    def update_pass_values(passTypeIdentifier, serialNumber, values)
-      resource = "passes/#{passTypeIdentifier}/#{serialNumber}/values"
+    def update_pass_values(pass, values)
+      resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}/values"
       call :put, resource, values      
-    end
+    end   
+  
 
     # @param [PassSlot::Pass] pass Existing Pass
     # @param [String] placeholderName Name of the placeholder
