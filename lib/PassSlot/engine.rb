@@ -70,7 +70,7 @@ module PassSlot
     
     
     def update_pass_values(passTypeIdentifier, serialNumber, values)
-      resource = "passes/passTypeIdentifier/serialNumber/values"
+      resource = "passes/#{passTypeIdentifier}/#{serialNumber}/values"
       call :put, resource, values      
     end
 
