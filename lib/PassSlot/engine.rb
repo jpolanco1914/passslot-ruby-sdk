@@ -49,6 +49,11 @@ module PassSlot
       resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}"
       call :get, resource
     end
+    
+    def delete_pass(pass)
+      resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}"
+      call :delete, resource
+    end
 
     # @param [PassSlot::Pass] pass Existing Pass
     # @return [Boolean] pkpass binary data
