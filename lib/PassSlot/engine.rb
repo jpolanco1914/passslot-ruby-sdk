@@ -66,7 +66,12 @@ module PassSlot
     def update_pass_values(pass, values)
       resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}/values"
       call :put, resource, values      
-    end   
+    end 
+    
+    def update_pass_values1(pass, values)
+      resource = "passes/#{pass.passTypeIdentifier}/#{pass.serialNumber}/values"
+      call :put, resource, values
+    end
   
 
     # @param [PassSlot::Pass] pass Existing Pass
